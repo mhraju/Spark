@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activities.BaseActivity">
+
+
+    <item
+        android:id="@+id/action_settings"
+        android:title="Settings"
+        android:orderInCategory="300"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_more_vert_white_24dp"
+        >
+        <menu>
+            <item
+                android:id="@+id/devoted_name"
+                android:icon="@drawable/heart_icon"
+                android:orderInCategory="100"
+                android:title="Devotion" />
+
+            <item
+                android:id="@+id/about"
+                android:icon="@drawable/info"
+                android:orderInCategory="100"
+                android:title="About" />
+
+        </menu>
+    </item>
+
+
+</menu>
+
