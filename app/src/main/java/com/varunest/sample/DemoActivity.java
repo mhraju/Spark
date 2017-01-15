@@ -173,14 +173,18 @@ public class DemoActivity extends AppCompatActivity {
         GlideDrawableImageViewTarget imageViewTarget = new GlideDrawableImageViewTarget(imageView);
         Glide.with(this).load(R.raw.bd_gift).into(imageViewTarget);
 
-        ((SparkButton) heartLayout.findViewById(R.id.heart_button)).setChecked(false);
+       /* ((SparkButton) heartLayout.findViewById(R.id.heart_button)).setChecked(true);
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
                 ((SparkButton) heartLayout.findViewById(R.id.heart_button)).setChecked(true);
                 ((SparkButton) heartLayout.findViewById(R.id.heart_button)).playAnimation();
             }
-        }, 300);
+        }, 300);*/
+
+        ((SparkButton) heartLayout.findViewById(R.id.heart_button)).playAnimation();
+
+        ((SparkButton) heartLayout.findViewById(R.id.facebook_button)).playAnimation();
     }
 
     private void playStarAnimation(final View starLayout) {
