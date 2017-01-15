@@ -23,9 +23,8 @@
             android:id="@+id/twitter_card"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginBottom="4dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
             android:layout_gravity="center"
             android:clipChildren="false"
             android:clipToPadding="false">
@@ -37,18 +36,18 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="4dp"
                 android:layout_marginLeft="16dp"
-                android:layout_marginTop="4dp"
+                android:layout_marginTop="16dp"
                 android:layout_marginRight="16dp"
-                android:textSize="20dp" />
+                android:textSize="24sp" />
 
                 <com.varunest.sparkbutton.SparkButton
                     android:id="@+id/twitter_button"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="550dp"
                     android:layout_gravity="center"
                     android:clickable="false"
                     app:sparkbutton_activeImage="@drawable/bd_cake"
-                    app:sparkbutton_iconSize="200dp"
+                    app:sparkbutton_iconSize="180dp"
                     app:sparkbutton_pressOnTouch="false"
                     app:sparkbutton_primaryColor="@color/heart_primary_color"
                     app:sparkbutton_secondaryColor="@color/heart_secondary_color" />
