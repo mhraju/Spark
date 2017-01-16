@@ -27,6 +27,6 @@
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:layout_gravity="bottom|center_vertical"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
+        app:srcCompat="@drawable/musics" />
 
 </android.support.design.widget.CoordinatorLayout>

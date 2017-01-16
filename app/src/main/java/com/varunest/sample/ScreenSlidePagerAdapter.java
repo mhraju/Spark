@@ -28,20 +28,20 @@ public class ScreenSlidePagerAdapter extends PagerAdapter {
         View view = null;
         switch (position) {
             case 0:
-                view =  LayoutInflater.from(context).inflate(R.layout.demo_star, container, false);
-                setupStarLayoutClickEvents(view);
+                view =  LayoutInflater.from(context).inflate(R.layout.demo_twitter, container, false);
+                setupTwitterLayoutClickEvents(view);
                 break;
             case 1:
-                view = LayoutInflater.from(context).inflate(R.layout.demo_heart, container, false);
-                setupHeartLayoutClickEvents(view);
-                break;
-            case 2:
                 view = LayoutInflater.from(context).inflate(R.layout.demo_facebook, container, false);
                 setupFacebookLayoutClickEvents(view);
                 break;
+            case 2:
+                view = LayoutInflater.from(context).inflate(R.layout.demo_star, container, false);
+                setupStarLayoutClickEvents(view);
+                break;
             case 3:
-                view = LayoutInflater.from(context).inflate(R.layout.demo_twitter, container, false);
-                setupTwitterLayoutClickEvents(view);
+                view = LayoutInflater.from(context).inflate(R.layout.demo_heart, container, false);
+                setupHeartLayoutClickEvents(view);
                 break;
         }
         if (view != null) {
@@ -71,59 +71,21 @@ public class ScreenSlidePagerAdapter extends PagerAdapter {
         String title = "";
         switch (position) {
             case 0:
-                title = context.getString(R.string.star);
+                title = context.getString(R.string.twitter);
                 break;
             case 1:
-                title = context.getString(R.string.heart);
-                break;
-            case 2:
                 title = context.getString(R.string.facebook);
                 break;
+            case 2:
+                title = context.getString(R.string.star);
+                break;
             case 3:
-                title = context.getString(R.string.twitter);
+                title = context.getString(R.string.heart);
                 break;
         }
         return title;
     }
 
-    public void setupStarLayoutClickEvents(final View view) {
-        view.findViewById(R.id.cardview_1).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                view.findViewById(R.id.star_button1).performClick();
-            }
-        });
-        view.findViewById(R.id.cardview_2).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                view.findViewById(R.id.star_button2).performClick();
-            }
-        });
-        /*view.findViewById(R.id.github_page).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openGithubPage();
-            }
-        });*/
-    }
-
-    private void setupHeartLayoutClickEvents(View view) {
-       /* view.findViewById(R.id.github_page).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openGithubPage();
-            }
-        });*/
-    }
-
-    public void setupFacebookLayoutClickEvents(View view) {
-        /*view.findViewById(R.id.github_page).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openGithubPage();
-            }
-        });*/
-    }
 
     public void setupTwitterLayoutClickEvents(final View view) {
         /*view.findViewById(R.id.github_page).setOnClickListener(new View.OnClickListener() {
@@ -157,6 +119,51 @@ public class ScreenSlidePagerAdapter extends PagerAdapter {
             }
         });
     }
+
+
+    public void setupFacebookLayoutClickEvents(View view) {
+        /*view.findViewById(R.id.github_page).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openGithubPage();
+            }
+        });*/
+    }
+
+
+
+    public void setupStarLayoutClickEvents(final View view) {
+        /*view.findViewById(R.id.cardview_1).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                view.findViewById(R.id.star_button1).performClick();
+            }
+        });
+        view.findViewById(R.id.cardview_2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                view.findViewById(R.id.star_button2).performClick();
+            }
+        });*/
+        /*view.findViewById(R.id.github_page).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openGithubPage();
+            }
+        });*/
+    }
+
+    private void setupHeartLayoutClickEvents(View view) {
+       /* view.findViewById(R.id.github_page).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openGithubPage();
+            }
+        });*/
+    }
+
+
+
 
     private void openGithubPage() {
         Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.github.com/varunest"));

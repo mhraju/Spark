@@ -15,131 +15,272 @@
         android:orientation="vertical">
 
         <android.support.v7.widget.CardView
-            xmlns:app="http://schemas.android.com/apk/res-auto"
             android:id="@+id/cardview_1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="8dp"
             android:clipChildren="false"
-            android:clipToPadding="false"
-            android:soundEffectsEnabled="false">
-
-            <LinearLayout
-                xmlns:app="http://schemas.android.com/apk/res-auto"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:clipChildren="false"
-                android:clipToPadding="false"
-                android:orientation="vertical">
-
-                <com.hanks.htextview.HTextView
-                    android:id="@+id/star_textview1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="16dp"
-                    android:lines="4"
-                    android:maxLines="4"
-                    android:gravity="left"
-                    android:layout_marginRight="16dp"
-                    android:layout_marginTop="10dp"
-                    android:textSize="20dp"
-                    />
-
-                <com.varunest.sparkbutton.SparkButton
-                    android:id="@+id/star_button1"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_gravity="right"
-                    android:layout_marginBottom="16dp"
-                    android:layout_marginRight="16dp"
-                    app:sparkbutton_activeImage="@drawable/ic_star_on"
-                    app:sparkbutton_animationSpeed=".85"
-                    app:sparkbutton_iconSize="30dp"
-                    app:sparkbutton_inActiveImage="@drawable/ic_star_off" />
-            </LinearLayout>
-
-        </android.support.v7.widget.CardView>
-
-        <android.support.v7.widget.CardView
-            android:id="@+id/cardview_2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginTop="20dp"
-            android:clipChildren="false"
-            android:clipToPadding="false"
-            android:soundEffectsEnabled="false">
+            android:clipToPadding="false">
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:clipChildren="false"
                 android:clipToPadding="false"
-                android:orientation="vertical">
+                android:layout_marginBottom="16dp"
+                android:orientation="horizontal">
+
 
                 <de.hdodenhof.circleimageview.CircleImageView
                     xmlns:app="http://schemas.android.com/apk/res-auto"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/heart"/>
+                    android:layout_width="110dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_height="110dp"
+                    android:id="@+id/starImage1"
+                    android:src="@drawable/len"
+                    android:layout_centerVertical="true"
+                    android:layout_above="@+id/facebook_button" />
 
                 <TextView
-                    android:layout_width="match_parent"
+                    android:layout_toRightOf="@+id/starImage1"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginRight="16dp"
-                    android:layout_marginTop="40dp"
-                    android:id="@+id/text1"
+                    android:layout_marginBottom="24dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="8dp"
+                    android:id="@+id/star_text"
+                    android:layout_centerVertical="true"
                     android:fontFamily="sans-serif-light"
-                    android:text="@string/star_layout_text2"
-                    android:textSize="20dp" />
+                    android:text="     HappY BirthDaY Darling \n
+on your birthday u blessed with \n      love, joy and kindness. \n   My love is always with u\n          Love My Beloved..."
+                    android:textSize="18sp" />
+
+                <com.varunest.sparkbutton.SparkButton
+                    android:id="@+id/star_button1"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="right"
+                    android:layout_below="@+id/star_text"
+                    android:layout_marginRight="16dp"
+                    android:layout_alignParentRight="true"
+                    app:sparkbutton_activeImage="@drawable/ic_star_on"
+                    app:sparkbutton_animationSpeed=".85"
+                    app:sparkbutton_iconSize="30dp"
+                    app:sparkbutton_inActiveImage="@drawable/ic_star_off" />
+
+
+            </RelativeLayout>
+
+
+
+        </android.support.v7.widget.CardView>
+
+
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="16dp"
+            android:clipChildren="false"
+            android:clipToPadding="false">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:layout_marginBottom="16dp"
+                android:orientation="horizontal">
+
+
+
+
+                <TextView
+                    android:layout_toLeftOf="@+id/heartImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="24dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="8dp"
+                    android:id="@+id/heart_text"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="sans-serif-light"
+                    android:text="          On your bithday, I just\n wanna ask u one question. Why\n      u steal my heart? U know,\n I would have given it to u for free\n
+  HappY BirthDaY my Aphrodite"
+                    android:textSize="18sp" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="110dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_height="110dp"
+                    android:id="@+id/heartImage"
+                    android:src="@drawable/leena"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_above="@+id/facebook_button" />
 
                 <com.varunest.sparkbutton.SparkButton
                     android:id="@+id/star_button2"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_gravity="right"
-                    android:layout_below="@+id/text1"
-                    android:layout_marginBottom="16dp"
-                    android:layout_marginRight="16dp"
+                    android:layout_below="@+id/heart_text"
+                    android:layout_marginLeft="16dp"
+                    android:layout_alignParentLeft="true"
                     app:sparkbutton_activeImage="@drawable/ic_star_on"
                     app:sparkbutton_animationSpeed=".85"
                     app:sparkbutton_iconSize="30dp"
                     app:sparkbutton_inActiveImage="@drawable/ic_star_off" />
+
+
             </RelativeLayout>
 
         </android.support.v7.widget.CardView>
 
-        <!--<LinearLayout
-            android:id="@+id/github_page"
-            android:layout_width="wrap_content"
+
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="25dp"
-            android:background="@drawable/button_shape"
-            android:orientation="horizontal"
-            android:paddingBottom="5dp"
-            android:paddingLeft="16dp"
-            android:paddingRight="16dp"
-            android:paddingTop="5dp">
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="16dp"
+            android:clipChildren="false"
+            android:clipToPadding="false">
 
-            <ImageView
-                android:layout_width="38dp"
-                android:layout_height="38dp"
-                android:src="@drawable/ic_github" />
-
-            <TextView
-                android:layout_width="wrap_content"
+            <RelativeLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_marginLeft="5dp"
-                android:fontFamily="sans-serif-light"
-                android:text="Source Code"
-                android:textSize="20dp" />
-        </LinearLayout>-->
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:layout_marginBottom="16dp"
+                android:orientation="horizontal">
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="95dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_height="110dp"
+                    android:id="@+id/starImage2"
+                    android:src="@drawable/lina"
+                    android:layout_centerVertical="true"
+                    android:layout_above="@+id/facebook_button" />
+
+                <TextView
+                    android:layout_toRightOf="@+id/starImage2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="24dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="8dp"
+                    android:id="@+id/star_text2"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="sans-serif-light"
+                    android:text="         HappY BirthDaY Babe\n
+I am happy to have found love in u,\n   Someone so caring and true...\n        It's your Birthday today\n     all the happiness and cheer...\n               Comes your way.\n  I seal my wish with a lovely kiss. "
+                    android:textSize="18sp" />
+
+                <com.varunest.sparkbutton.SparkButton
+                    android:id="@+id/star_buttons2"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="right"
+                    android:layout_below="@+id/star_text2"
+                    android:layout_marginRight="16dp"
+                    android:layout_alignParentRight="true"
+                    app:sparkbutton_activeImage="@drawable/ic_star_on"
+                    app:sparkbutton_animationSpeed=".85"
+                    app:sparkbutton_iconSize="30dp"
+                    app:sparkbutton_inActiveImage="@drawable/ic_star_off" />
+
+
+            </RelativeLayout>
+
+
+
+        </android.support.v7.widget.CardView>
+
+
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="16dp"
+            android:clipChildren="false"
+            android:clipToPadding="false">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:layout_marginBottom="16dp"
+                android:orientation="horizontal">
+
+
+
+
+                <TextView
+                    android:layout_toLeftOf="@+id/heartImage3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="24dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="8dp"
+                    android:id="@+id/heart_text3"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="sans-serif-light"
+                    android:text=" Heart to heart talks...\nWhispering those sweet nothings..\n And your smiles that say...\nYou love me!\n Sweetheart I am so happy..\nWe found each other...\n
+      HappY BirthDaY my Love"
+                    android:textSize="18sp" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="90dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_height="100dp"
+                    android:id="@+id/heartImage3"
+                    android:src="@drawable/leeena"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_above="@+id/facebook_button" />
+
+                <com.varunest.sparkbutton.SparkButton
+                    android:id="@+id/star_button3"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="right"
+                    android:layout_below="@+id/heart_text3"
+                    android:layout_marginLeft="16dp"
+                    android:layout_alignParentLeft="true"
+                    app:sparkbutton_activeImage="@drawable/ic_star_on"
+                    app:sparkbutton_animationSpeed=".85"
+                    app:sparkbutton_iconSize="30dp"
+                    app:sparkbutton_inActiveImage="@drawable/ic_star_off" />
+
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+
+
 
     </LinearLayout>
 </ScrollView>

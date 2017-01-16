@@ -40,7 +40,7 @@ public class DemoActivity extends AppCompatActivity {
     private PagerAdapter pagerAdapter;
     private TabLayout tabLayout;
     private Toolbar toolbar;
-    private HTextView textView, starTextView1, happyBirthday;
+    private HTextView heart_textView, textView, starTextView1, happyBirthday;
     private ImageView imageView;
 
     @Override
@@ -139,16 +139,16 @@ public class DemoActivity extends AppCompatActivity {
                 if (view != null) {
                     switch (position) {
                         case 0:
-                            playStarAnimation(view);
+                            playTwitterAnimation(view);
                             break;
                         case 1:
-                            playHeartAnimation(view);
-                            break;
-                        case 2:
                             playFacebookAnimation(view);
                             break;
+                        case 2:
+                            playStarAnimation(view);
+                            break;
                         case 3:
-                            playTwitterAnimation(view);
+                            playHeartAnimation(view);
                             break;
                     }
                 }
@@ -172,54 +172,6 @@ public class DemoActivity extends AppCompatActivity {
         return view;
     }
 
-    private void playHeartAnimation(final View heartLayout) {
-
-        imageView = (ImageView) heartLayout.findViewById(R.id.image_heart);
-
-        GlideDrawableImageViewTarget imageViewTarget = new GlideDrawableImageViewTarget(imageView);
-        Glide.with(this).load(R.raw.bd_gift).into(imageViewTarget);
-
-       /* ((SparkButton) heartLayout.findViewById(R.id.heart_button)).setChecked(true);
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                ((SparkButton) heartLayout.findViewById(R.id.heart_button)).setChecked(true);
-                ((SparkButton) heartLayout.findViewById(R.id.heart_button)).playAnimation();
-            }
-        }, 300);*/
-
-        ((SparkButton) heartLayout.findViewById(R.id.heart_button)).playAnimation();
-
-        ((SparkButton) heartLayout.findViewById(R.id.facebook_button)).playAnimation();
-    }
-
-    private void playStarAnimation(final View starLayout) {
-        starTextView1 = (HTextView) starLayout.findViewById(R.id.star_textview1);
-        starTextView1.setTextColor(Color.parseColor("#000000"));
-        starTextView1.setAnimateType(HTextViewType.LINE);
-        starTextView1.setSingleLine(false);
-        starTextView1.setImeOptions(EditorInfo.IME_FLAG_NO_ENTER_ACTION);
-       /* starTextView1.animateText("Highly customizable");*/
-       /* starTextView1.setAnimateType(HTextViewType.TYPER);
-        starTextView1.setAnimateType(HTextViewType.RAINBOW);*/
-       /* starTextView1.animateText("Hello Everyone!! Whazzup");*/
-        ((SparkButton) starLayout.findViewById(R.id.star_button1)).setChecked(false);
-        ((SparkButton) starLayout.findViewById(R.id.star_button2)).setChecked(true);
-        ((SparkButton) starLayout.findViewById(R.id.star_button2)).playAnimation();
-    }
-
-    private void playFacebookAnimation(View facebookLayout) {
-        textView = (HTextView) facebookLayout.findViewById(R.id.last_textView);
-        textView.setTextColor(Color.parseColor("#ffffff"));
-
-        textView.setTypeface(null);
-        textView.setAnimateType(HTextViewType.ANVIL);
-        textView.setAnimateType(HTextViewType.TYPER);
-        textView.setAnimateType(HTextViewType.RAINBOW);
-        textView.animateText("Hello Everyone!! Whazzup");
-        ((SparkButton) facebookLayout.findViewById(R.id.facebook_button)).playAnimation();
-    }
-
     private void playTwitterAnimation(View twitterLayout) {
         happyBirthday = (HTextView) twitterLayout.findViewById(R.id.happy_birthday);
         happyBirthday.setTextColor(Color.parseColor("#ffffff"));
@@ -228,7 +180,8 @@ public class DemoActivity extends AppCompatActivity {
         /*textView.setAnimateType(HTextViewType.ANVIL);
         textView.setAnimateType(HTextViewType.TYPER);*/
         happyBirthday.setAnimateType(HTextViewType.RAINBOW);
-        happyBirthday.animateText("Hello Everyone!! Whazzup");
+        happyBirthday.animateText("HappY BirthDaY My BeLoved");
+        ((SparkButton) twitterLayout.findViewById(R.id.sweetheart_button)).playAnimation();
 
         /*happyBirthday.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -260,6 +213,103 @@ public class DemoActivity extends AppCompatActivity {
                 }
             }
         });
+    }
+
+
+    private void playFacebookAnimation(View facebookLayout) {
+
+
+        imageView = (ImageView) facebookLayout.findViewById(R.id.image_heart);
+
+        GlideDrawableImageViewTarget imageViewTarget = new GlideDrawableImageViewTarget(imageView);
+        Glide.with(this).load(R.raw.bd_anim).into(imageViewTarget);
+
+        ((SparkButton) facebookLayout.findViewById(R.id.heart_button)).playAnimation();
+
+        ((SparkButton) facebookLayout.findViewById(R.id.sweetheart_button)).playAnimation();
+
+        ((SparkButton) facebookLayout.findViewById(R.id.facebook_button)).playAnimation();
+
+        heart_textView = (HTextView) facebookLayout.findViewById(R.id.heart_textView);
+        heart_textView.setTextColor(Color.parseColor("#ea0d3d"));
+        heart_textView.setAnimateType(HTextViewType.RAINBOW);
+        heart_textView.animateText("HappY BirthDaY SweetHearT");
+
+
+
+        /*textView = (HTextView) facebookLayout.findViewById(R.id.last_textView);
+        textView.setTextColor(Color.parseColor("#ffffff"));
+
+        textView.setTypeface(null);
+        textView.setAnimateType(HTextViewType.ANVIL);
+        textView.setAnimateType(HTextViewType.TYPER);
+        textView.setAnimateType(HTextViewType.RAINBOW);
+        textView.animateText("Hello Everyone!! Whazzup");
+        ((SparkButton) facebookLayout.findViewById(R.id.facebook_button)).playAnimation();*/
+    }
+
+
+
+
+    private void playStarAnimation(final View starLayout) {
+
+      /*  starTextView1 = (HTextView) starLayout.findViewById(R.id.star_textview1);
+        starTextView1.setTextColor(Color.parseColor("#000000"));
+        starTextView1.setAnimateType(HTextViewType.LINE);
+        starTextView1.setSingleLine(false);
+        starTextView1.setImeOptions(EditorInfo.IME_FLAG_NO_ENTER_ACTION);*/
+
+
+       /* starTextView1.animateText("Highly customizable");*/
+       /* starTextView1.setAnimateType(HTextViewType.TYPER);
+        starTextView1.setAnimateType(HTextViewType.RAINBOW);*/
+       /* starTextView1.animateText("Hello Everyone!! Whazzup");*/
+
+
+        ((SparkButton) starLayout.findViewById(R.id.star_button2)).setChecked(false);
+        ((SparkButton) starLayout.findViewById(R.id.star_button1)).setChecked(true);
+        ((SparkButton) starLayout.findViewById(R.id.star_button1)).playAnimation();
+
+      //  ((SparkButton) starLayout.findViewById(R.id.star_button3)).setChecked(false);
+        ((SparkButton) starLayout.findViewById(R.id.star_button3)).setChecked(true);
+        ((SparkButton) starLayout.findViewById(R.id.star_button3)).playAnimation();
+        ((SparkButton) starLayout.findViewById(R.id.star_buttons2)).setChecked(true);
+        ((SparkButton) starLayout.findViewById(R.id.star_buttons2)).playAnimation();
+
+    }
+
+
+
+
+
+    private void playHeartAnimation(final View heartLayout) {
+
+        imageView = (ImageView) heartLayout.findViewById(R.id.image_heart);
+
+        GlideDrawableImageViewTarget imageViewTarget = new GlideDrawableImageViewTarget(imageView);
+        Glide.with(this).load(R.raw.bd_gift).into(imageViewTarget);
+
+       /* ((SparkButton) heartLayout.findViewById(R.id.heart_button)).setChecked(true);
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                ((SparkButton) heartLayout.findViewById(R.id.heart_button)).setChecked(true);
+                ((SparkButton) heartLayout.findViewById(R.id.heart_button)).playAnimation();
+            }
+        }, 300);*/
+
+        ((SparkButton) heartLayout.findViewById(R.id.heart_button)).playAnimation();
+
+        ((SparkButton) heartLayout.findViewById(R.id.sweetheart_button)).playAnimation();
+
+        ((SparkButton) heartLayout.findViewById(R.id.facebook_button)).playAnimation();
+
+        heart_textView = (HTextView) heartLayout.findViewById(R.id.heart_textView);
+        heart_textView.setTextColor(Color.parseColor("#ea0d3d"));
+        heart_textView.setAnimateType(HTextViewType.TYPER);
+        heart_textView.animateText("HappY BirthDay SweetHeart");
+        /*heart_textView.setSingleLine(false);
+        heart_textView.setImeOptions(EditorInfo.IME_FLAG_NO_ENTER_ACTION);*/
     }
 
     /*@Override
