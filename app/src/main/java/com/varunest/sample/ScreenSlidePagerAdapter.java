@@ -2,7 +2,6 @@ package com.varunest.sample;
 
 import android.content.Context;
 import android.content.Intent;
-import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Handler;
 import android.support.v4.view.PagerAdapter;
@@ -28,20 +27,20 @@ public class ScreenSlidePagerAdapter extends PagerAdapter {
         View view = null;
         switch (position) {
             case 0:
-                view =  LayoutInflater.from(context).inflate(R.layout.demo_twitter, container, false);
-                setupTwitterLayoutClickEvents(view);
+                view =  LayoutInflater.from(context).inflate(R.layout.demo_star, container, false);
+                setupStarLayoutClickEvents(view);
                 break;
             case 1:
+                view = LayoutInflater.from(context).inflate(R.layout.demo_heart, container, false);
+                setupHeartLayoutClickEvents(view);
+                break;
+            case 2:
                 view = LayoutInflater.from(context).inflate(R.layout.demo_facebook, container, false);
                 setupFacebookLayoutClickEvents(view);
                 break;
-            case 2:
-                view = LayoutInflater.from(context).inflate(R.layout.demo_star, container, false);
-                setupStarLayoutClickEvents(view);
-                break;
             case 3:
-                view = LayoutInflater.from(context).inflate(R.layout.demo_heart, container, false);
-                setupHeartLayoutClickEvents(view);
+                view = LayoutInflater.from(context).inflate(R.layout.demo_twitter, container, false);
+                setupTwitterLayoutClickEvents(view);
                 break;
         }
         if (view != null) {
@@ -71,66 +70,20 @@ public class ScreenSlidePagerAdapter extends PagerAdapter {
         String title = "";
         switch (position) {
             case 0:
-                title = context.getString(R.string.twitter);
-                break;
-            case 1:
-                title = context.getString(R.string.facebook);
-                break;
-            case 2:
                 title = context.getString(R.string.star);
                 break;
-            case 3:
+            case 1:
                 title = context.getString(R.string.heart);
+                break;
+            case 2:
+                title = context.getString(R.string.facebook);
+                break;
+            case 3:
+                title = context.getString(R.string.twitter);
                 break;
         }
         return title;
     }
-
-
-    public void setupTwitterLayoutClickEvents(final View view) {
-        /*view.findViewById(R.id.github_page).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openGithubPage();
-            }
-        });*/
-        view.findViewById(R.id.twitter_card).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ((SparkButton)view.findViewById(R.id.twitter_button)).playAnimation();
-                new Handler().postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        openTwitterPage();
-
-                    }
-                }, 500);
-
-                MediaPlayer mp = MediaPlayer.create(context, R.raw.happybirthday);
-                if(mp.isPlaying())
-                {
-                    mp.stop();
-                }
-                else {
-                    mp.start();
-                    /*fab.setClickable(false);
-                    mp.start();*/
-                }
-            }
-        });
-    }
-
-
-    public void setupFacebookLayoutClickEvents(View view) {
-        /*view.findViewById(R.id.github_page).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openGithubPage();
-            }
-        });*/
-    }
-
-
 
     public void setupStarLayoutClickEvents(final View view) {
         /*view.findViewById(R.id.cardview_1).setOnClickListener(new View.OnClickListener() {
@@ -138,8 +91,8 @@ public class ScreenSlidePagerAdapter extends PagerAdapter {
             public void onClick(View v) {
                 view.findViewById(R.id.star_button1).performClick();
             }
-        });
-        view.findViewById(R.id.cardview_2).setOnClickListener(new View.OnClickListener() {
+        });*/
+        /*view.findViewById(R.id.cardview_2).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 view.findViewById(R.id.star_button2).performClick();
@@ -162,8 +115,36 @@ public class ScreenSlidePagerAdapter extends PagerAdapter {
         });*/
     }
 
+    public void setupFacebookLayoutClickEvents(View view) {
+        /*view.findViewById(R.id.github_page).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openGithubPage();
+            }
+        });*/
+    }
 
+    public void setupTwitterLayoutClickEvents(final View view) {
+        /*view.findViewById(R.id.github_page).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openGithubPage();
+            }
+        });*/
+        /*view.findViewById(R.id.twitter_card).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ((SparkButton)view.findViewById(R.id.twitter_button)).playAnimation();
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        openTwitterPage();
 
+                    }
+                }, 500);
+            }
+        });*/
+    }
 
     private void openGithubPage() {
         Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.github.com/varunest"));

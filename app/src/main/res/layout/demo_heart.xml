@@ -48,7 +48,7 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="16dp"
                     android:layout_marginRight="16dp"
-                    app:sparkbutton_animationSpeed=".85"
+                    app:sparkbutton_animationSpeed=".5"
                     app:sparkbutton_activeImage="@drawable/redheart"
 
                     app:sparkbutton_iconSize="30dp"
@@ -81,7 +81,7 @@
                 android:layout_width="32dp"
                 android:layout_height="32dp"
                 android:layout_marginLeft="0dp"
-                app:sparkbutton_animationSpeed=".85"
+                app:sparkbutton_animationSpeed=".5"
                 app:sparkbutton_activeImage="@drawable/sweetheart"
                 app:sparkbutton_iconSize="30dp"
                 app:sparkbutton_primaryColor="@color/heart_primary_color"
@@ -110,12 +110,12 @@
 
                 <de.hdodenhof.circleimageview.CircleImageView
                     xmlns:app="http://schemas.android.com/apk/res-auto"
-                    android:layout_width="100dp"
+                    android:layout_width="110dp"
                     android:layout_marginTop="8dp"
-                    android:layout_marginLeft="8dp"
+                    android:layout_marginLeft="16dp"
                     android:layout_height="110dp"
                     android:id="@+id/heartImage"
-                    android:src="@drawable/leeena"
+                    android:src="@drawable/leena"
                     android:layout_above="@+id/facebook_button" />
 
                 <TextView
@@ -123,14 +123,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="24dp"
-                    android:layout_marginLeft="8dp"
+                    android:layout_marginLeft="16dp"
                     android:layout_marginRight="8dp"
                     android:layout_marginTop="8dp"
                     android:id="@+id/heart_text"
+                    android:textColor="#FF1744"
                     android:layout_centerVertical="true"
                     android:fontFamily="sans-serif-light"
-                    android:text="My miracle month! coz u come in this month for me on this month and make my universe amazing.\n
-HappY BirthDaY my Dream Queen"
+                    android:text="          You are my life  \nmy sunshine, my everything...\n  you give me reaon to smile\n          Wishing you yo \n      Have a special Birthday "
                     android:textSize="18sp" />
 
                 <com.varunest.sparkbutton.SparkButton
@@ -142,6 +142,7 @@ HappY BirthDaY my Dream Queen"
                     android:layout_alignParentRight="true"
                     app:sparkbutton_activeImage="@drawable/ic_thumb"
                     app:sparkbutton_iconSize="20dp"
+                    app:sparkbutton_animationSpeed=".5"
                     app:sparkbutton_primaryColor="@color/facebook_primary_color"
                     app:sparkbutton_secondaryColor="@color/facebook_secondary_color" />
 
@@ -182,3 +183,6 @@ HappY BirthDaY my Dream Queen"
         </LinearLayout>-->
     </LinearLayout>
 </ScrollView>
+
+
+

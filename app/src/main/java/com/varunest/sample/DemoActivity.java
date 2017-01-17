@@ -139,16 +139,16 @@ public class DemoActivity extends AppCompatActivity {
                 if (view != null) {
                     switch (position) {
                         case 0:
-                            playTwitterAnimation(view);
-                            break;
-                        case 1:
-                            playFacebookAnimation(view);
-                            break;
-                        case 2:
                             playStarAnimation(view);
                             break;
-                        case 3:
+                        case 1:
                             playHeartAnimation(view);
+                            break;
+                        case 2:
+                            playFacebookAnimation(view);
+                            break;
+                        case 3:
+                            playTwitterAnimation(view);
                             break;
                     }
                 }
@@ -172,16 +172,50 @@ public class DemoActivity extends AppCompatActivity {
         return view;
     }
 
-    private void playTwitterAnimation(View twitterLayout) {
-        happyBirthday = (HTextView) twitterLayout.findViewById(R.id.happy_birthday);
+    private void playHeartAnimation(final View heartLayout) {
+
+
+        imageView = (ImageView) heartLayout.findViewById(R.id.image_heart);
+
+        GlideDrawableImageViewTarget imageViewTarget = new GlideDrawableImageViewTarget(imageView);
+        Glide.with(this).load(R.raw.bd_anim).into(imageViewTarget);
+
+        ((SparkButton) heartLayout.findViewById(R.id.heart_button)).playAnimation();
+
+        ((SparkButton) heartLayout.findViewById(R.id.sweetheart_button)).playAnimation();
+
+        ((SparkButton) heartLayout.findViewById(R.id.facebook_button)).playAnimation();
+
+        heart_textView = (HTextView) heartLayout.findViewById(R.id.heart_textView);
+        heart_textView.setTextColor(Color.parseColor("#ea0d3d"));
+        heart_textView.setAnimateType(HTextViewType.RAINBOW);
+        heart_textView.animateText("HappY BirthDaY HoneY");
+
+    }
+
+    private void playStarAnimation(final View starLayout) {
+
+      /*  starTextView1 = (HTextView) starLayout.findViewById(R.id.star_textview1);
+        starTextView1.setTextColor(Color.parseColor("#000000"));
+        starTextView1.setAnimateType(HTextViewType.LINE);
+        starTextView1.setSingleLine(false);
+        starTextView1.setImeOptions(EditorInfo.IME_FLAG_NO_ENTER_ACTION);*/
+
+
+       /* starTextView1.animateText("Highly customizable");*/
+       /* starTextView1.setAnimateType(HTextViewType.TYPER);
+        starTextView1.setAnimateType(HTextViewType.RAINBOW);*/
+       /* starTextView1.animateText("Hello Everyone!! Whazzup");*/
+
+
+        happyBirthday = (HTextView) starLayout.findViewById(R.id.happy_birthday);
         happyBirthday.setTextColor(Color.parseColor("#ffffff"));
 
         happyBirthday.setTypeface(null);
         /*textView.setAnimateType(HTextViewType.ANVIL);
         textView.setAnimateType(HTextViewType.TYPER);*/
         happyBirthday.setAnimateType(HTextViewType.RAINBOW);
-        happyBirthday.animateText("HappY BirthDaY My BeLoved");
-        ((SparkButton) twitterLayout.findViewById(R.id.sweetheart_button)).playAnimation();
+        happyBirthday.animateText("HappY BirthDaY Beloved SweetHearT");
 
         /*happyBirthday.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -199,8 +233,8 @@ public class DemoActivity extends AppCompatActivity {
             }
         });*/
 
-        ((SparkButton) twitterLayout.findViewById(R.id.twitter_button)).playAnimation();
-        twitterLayout.setOnClickListener(new View.OnClickListener() {
+        ((SparkButton) starLayout.findViewById(R.id.twitter_button)).playAnimation();
+        starLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 MediaPlayer mp = MediaPlayer.create(DemoActivity.this, R.raw.happybirthday);
@@ -213,111 +247,63 @@ public class DemoActivity extends AppCompatActivity {
                 }
             }
         });
-    }
 
+
+    }
 
     private void playFacebookAnimation(View facebookLayout) {
 
 
-        imageView = (ImageView) facebookLayout.findViewById(R.id.image_heart);
+         ((SparkButton) facebookLayout.findViewById(R.id.star_button2)).setChecked(true);
+        ((SparkButton) facebookLayout.findViewById(R.id.star_button2)).playAnimation();
+        ((SparkButton) facebookLayout.findViewById(R.id.star_button1)).setChecked(true);
+        ((SparkButton) facebookLayout.findViewById(R.id.star_button1)).playAnimation();
 
-        GlideDrawableImageViewTarget imageViewTarget = new GlideDrawableImageViewTarget(imageView);
-        Glide.with(this).load(R.raw.bd_anim).into(imageViewTarget);
+        //  ((SparkButton) starLayout.findViewById(R.id.star_button3)).setChecked(false);
+        ((SparkButton) facebookLayout.findViewById(R.id.star_button3)).setChecked(true);
+        ((SparkButton) facebookLayout.findViewById(R.id.star_button3)).playAnimation();
+        ((SparkButton) facebookLayout.findViewById(R.id.star_buttons2)).setChecked(true);
+        ((SparkButton) facebookLayout.findViewById(R.id.star_buttons2)).playAnimation();
 
-        ((SparkButton) facebookLayout.findViewById(R.id.heart_button)).playAnimation();
-
-        ((SparkButton) facebookLayout.findViewById(R.id.sweetheart_button)).playAnimation();
-
-        ((SparkButton) facebookLayout.findViewById(R.id.facebook_button)).playAnimation();
-
-        heart_textView = (HTextView) facebookLayout.findViewById(R.id.heart_textView);
-        heart_textView.setTextColor(Color.parseColor("#ea0d3d"));
-        heart_textView.setAnimateType(HTextViewType.RAINBOW);
-        heart_textView.animateText("HappY BirthDaY SweetHearT");
-
-
-
-        /*textView = (HTextView) facebookLayout.findViewById(R.id.last_textView);
-        textView.setTextColor(Color.parseColor("#ffffff"));
-
-        textView.setTypeface(null);
-        textView.setAnimateType(HTextViewType.ANVIL);
-        textView.setAnimateType(HTextViewType.TYPER);
-        textView.setAnimateType(HTextViewType.RAINBOW);
-        textView.animateText("Hello Everyone!! Whazzup");
-        ((SparkButton) facebookLayout.findViewById(R.id.facebook_button)).playAnimation();*/
-    }
-
-
-
-
-    private void playStarAnimation(final View starLayout) {
-
-      /*  starTextView1 = (HTextView) starLayout.findViewById(R.id.star_textview1);
-        starTextView1.setTextColor(Color.parseColor("#000000"));
-        starTextView1.setAnimateType(HTextViewType.LINE);
-        starTextView1.setSingleLine(false);
-        starTextView1.setImeOptions(EditorInfo.IME_FLAG_NO_ENTER_ACTION);*/
-
-
-       /* starTextView1.animateText("Highly customizable");*/
-       /* starTextView1.setAnimateType(HTextViewType.TYPER);
-        starTextView1.setAnimateType(HTextViewType.RAINBOW);*/
-       /* starTextView1.animateText("Hello Everyone!! Whazzup");*/
-
-
-        ((SparkButton) starLayout.findViewById(R.id.star_button2)).setChecked(false);
-        ((SparkButton) starLayout.findViewById(R.id.star_button1)).setChecked(true);
-        ((SparkButton) starLayout.findViewById(R.id.star_button1)).playAnimation();
-
-      //  ((SparkButton) starLayout.findViewById(R.id.star_button3)).setChecked(false);
-        ((SparkButton) starLayout.findViewById(R.id.star_button3)).setChecked(true);
-        ((SparkButton) starLayout.findViewById(R.id.star_button3)).playAnimation();
-        ((SparkButton) starLayout.findViewById(R.id.star_buttons2)).setChecked(true);
-        ((SparkButton) starLayout.findViewById(R.id.star_buttons2)).playAnimation();
 
     }
 
+    private void playTwitterAnimation(View twitterLayout) {
 
 
 
 
-    private void playHeartAnimation(final View heartLayout) {
 
-        imageView = (ImageView) heartLayout.findViewById(R.id.image_heart);
+         imageView = (ImageView) twitterLayout.findViewById(R.id.image_heart);
 
         GlideDrawableImageViewTarget imageViewTarget = new GlideDrawableImageViewTarget(imageView);
         Glide.with(this).load(R.raw.bd_gift).into(imageViewTarget);
 
-       /* ((SparkButton) heartLayout.findViewById(R.id.heart_button)).setChecked(true);
-        new Handler().postDelayed(new Runnable() {
+        ((SparkButton) twitterLayout.findViewById(R.id.heart_button)).setChecked(true);
+       /* new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                ((SparkButton) heartLayout.findViewById(R.id.heart_button)).setChecked(true);
-                ((SparkButton) heartLayout.findViewById(R.id.heart_button)).playAnimation();
+                ((SparkButton) twitterLayout.findViewById(R.id.heart_button)).setChecked(true);
+                ((SparkButton) twitterLayout.findViewById(R.id.heart_button)).playAnimation();
             }
         }, 300);*/
 
-        ((SparkButton) heartLayout.findViewById(R.id.heart_button)).playAnimation();
+        ((SparkButton) twitterLayout.findViewById(R.id.heart_button)).playAnimation();
 
-        ((SparkButton) heartLayout.findViewById(R.id.sweetheart_button)).playAnimation();
+        ((SparkButton) twitterLayout.findViewById(R.id.sweetheart_button)).playAnimation();
 
-        ((SparkButton) heartLayout.findViewById(R.id.facebook_button)).playAnimation();
+        ((SparkButton) twitterLayout.findViewById(R.id.facebook_button)).playAnimation();
 
-        heart_textView = (HTextView) heartLayout.findViewById(R.id.heart_textView);
+        heart_textView = (HTextView) twitterLayout.findViewById(R.id.heart_textView);
         heart_textView.setTextColor(Color.parseColor("#ea0d3d"));
         heart_textView.setAnimateType(HTextViewType.TYPER);
-        heart_textView.animateText("HappY BirthDay SweetHeart");
-        /*heart_textView.setSingleLine(false);
-        heart_textView.setImeOptions(EditorInfo.IME_FLAG_NO_ENTER_ACTION);*/
+        heart_textView.animateText("HappY BirthDaY SweetHearT");
+        heart_textView.setSingleLine(false);
+        heart_textView.setImeOptions(EditorInfo.IME_FLAG_NO_ENTER_ACTION);
+
+        
     }
 
-    /*@Override
-    public boolean onPrepareOptionsMenu(final Menu menu) {
-        getMenuInflater().inflate(R.menu.main, menu);
-
-        return super.onCreateOptionsMenu(menu);
-    }*/
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -337,7 +323,7 @@ public class DemoActivity extends AppCompatActivity {
                 new AlertDialog.Builder(this)
                         .setTitle("Dedicated To....")
                         .setMessage(
-                                "my beloved adorable\n\n" +
+                                "My Beloved Adorable Birthday Queen\n\n" +
                                         "Marufa Akter Leena\n")
                         .setPositiveButton("OK", null)
                         .show();
@@ -359,43 +345,5 @@ public class DemoActivity extends AppCompatActivity {
 
     }
 
-
-    /*@Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_activity_main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-
-        switch (item.getItemId()) {
-
-            case R.id.faboptions_favorite:
-                new AlertDialog.Builder(this)
-                        .setTitle("Dedicated To....")
-                        .setMessage(
-                                "my beloved adorable\n\n" +
-                                        "Marufa Akter Leena\n")
-                        .setPositiveButton("OK", null)
-                        .show();
-                return true;
-
-            case R.id.faboptions_textsms:
-                new AlertDialog.Builder(this)
-                        .setTitle("Developed by : Tech_Nerds")
-                        .setMessage(
-                                "Email : technerds1993@gmail.com\n\n" +
-                                        "Blog : https://mhraju.github.io\n")
-                        .setPositiveButton("OK", null)
-                        .show();
-                return true;
-
-            default:
-                return super.onOptionsItemSelected(item);
-        }
-
-    }*/
 
 }
